@@ -4,7 +4,15 @@ Si tu veux tester le site n'oublie pas de faire:
 
 # $ rails db:setup
 
-Projet : The Gossip Project, les premières views
+ou :
+
+1 - bundle install
+2 - rails db:drop (pour remettre la BDD à zéro)
+3 - rails db:migrate
+4 - rails db:seed
+
+
+# $ Projet : The Gossip Project, les premières views
 
 Note : le projet est à faire en pair-programming.
 
