@@ -2,14 +2,15 @@
 La page d'acceuil est http://localhost:3000/home
 Si tu veux tester le site n'oublie pas de faire:
 
-# $ rails db:setup
+rails db:setup
 
 ou :
 
 1. bundle install
 2. rails db:drop (pour remettre la BDD à zéro)
-3. rails db:migrate
-4. rails db:seed
+3. rails db:create
+4. rails db:migrate
+5. rails db:seed
 
 
 # Projet : The Gossip Project, les premières views
