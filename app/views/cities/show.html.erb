@@ -1,0 +1,28 @@
+<h1>Voici la ville de l'auteur du potin</h1>
+
+<!-- On peut utiliser @city.name car la ville a été récupérée à partir de son id (ligne dans le controller 'cities'). L'id de la ville a été transmis dans le lien sur la page 'show' de l'auteur.-->
+<p><%= @city.name %></p>
+
+<br/><br/>
+
+<h2>Voici tous les potins qui ont été crées par des auteurs de <%= @city.name %> : </h2>
+
+<!-- On fait une boucle sur tous les gossips -->
+<% @gossips.each do |gossip| %>
+
+	<!-- Si la ville de l'auteur du potin correspond à la ville de la page, -->
+	<% if gossip.user.city.name == @city.name %>
+		<!-- On affiche le potin -->
+		<!-- Affichage du n° du potin -->
+		<p>Potin n°<%= gossip.id %><br/>
+			<!-- Affichage de l'auteur -->
+			Auteur du potin : <%= gossip.user.first_name %><br/>
+			<!-- Affichage du titre -->
+			Titre du potin : <%= gossip.title %><br/>
+			<!-- Affichage du contenu -->
+			Contenu du potin : <%= gossip.content %>
+		</p>
+	<% end %>
+
+<% end %>
+

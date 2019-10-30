@@ -1,0 +1,25 @@
+<h1>GOSSIP TIME! </h1>
+
+
+  <br/><br/>
+
+<p> Titre du gossip : <%= @gossip.title %> </p>
+
+<!-- Pour récupérer l'id du potin :
+<p> Id du gossip : <%= @gossip.id %> </p>
+-->
+
+<p> Contenu du potin : <%= @gossip.content %> </p>
+
+<!-- La ligne suivante ne fonctionne pas pour afficher le bon user (l'auteur du potin)
+<p> Auteur du potin : <%= User.find(@gossip.id).first_name%> </p>
+-->
+
+<!-- La ligne suivante est la bonne pour afficher le bon auteur -->
+<p> Auteur du potin : <%= @gossip.user.first_name %> </p>
+
+<p> Ville de l'auteur : <%= @gossip.user.city.name%> </p>
+
+<br/>
+<!-- Dans le lien vers la page de l'auteur, on transmet l'id correspondant à l'auteur du gossip considéré (@gossip.user.id). -->
+<a href="<%= auteur_path(@gossip.user.id) %>" class="btn btn-primary">En savoir plus sur l'auteur du potin</a>

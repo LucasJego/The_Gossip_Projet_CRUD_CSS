@@ -1,0 +1,25 @@
+
+    <!-- ... -->
+<br><br><br>
+
+<center>
+    <%= form_tag url_for(action:'create'), method: "post" do %>
+
+      <%= label_tag 'Title' %><br>
+      <%= text_field_tag 'title'  %>
+      <br /> <br />
+
+      <%= label_tag 'Content' %><br>
+      <%= text_area_tag 'content' %>
+      <br /> <br />
+
+      <%= submit_tag "Create Post" %>
+      <div class="alert alert-success" role="alert">
+        Le Gossip a été créé
+      </div>
+      <div class="alert alert-info" role="alert">
+        Le Gossip n'a pas été créé
+      </div>
+    <% end %>
+
+</center>
